@@ -54,10 +54,8 @@ resource "aws_instance" "App"{
         key_name = "sravya" #KeyPair name to be attached to the instance. 
         vpc_security_group_ids = ["${aws_security_group.ssh_http_https.id}"] 
         provisioner "local-exec" { command = "sleep 20" } 
-                #local-exec runs our app server related playbook
-#         provisioner "local-exec" {
-#                command ="ansible-playbook -i ec2.py playbook.yml --private-key=.sravya --user ubuntu"
-#        }
+               
+      }
 
 }
 
