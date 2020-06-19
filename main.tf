@@ -42,10 +42,6 @@ resource "aws_security_group" "ssh_http_https" {
                 cidr_blocks     = ["0.0.0.0/0"]
         }
 
-#        tags {
-#                Name    = "ssh_http_https"
-#        }
-
 }
 
 resource "aws_instance" "App"{
