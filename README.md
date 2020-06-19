@@ -22,8 +22,8 @@
       key_name = "name of your key pair"
       
 ### 6) Run Terraform
-        **Terraform init**
-        **Terraform apply**
+        Terraform init
+        Terraform apply
       
 ### 7) Setting Up your Ansible playbook
    **Edit run-playbook.sh** - 
@@ -32,7 +32,7 @@
     Add your instance
       
 ### 8) Run Ansible playbook
-     **sh run-playbook.sh**
+     sh run-playbook.sh
       
 
      
