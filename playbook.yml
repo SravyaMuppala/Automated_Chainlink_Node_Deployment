@@ -1,6 +1,3 @@
-#################################################
-# DO Community Playbooks: Docker
-#################################################
 ---
 - hosts: all
   become: true
@@ -32,18 +29,10 @@
     - name: Install Docker Module for Python
       pip:
         name: docker
-
-        #    - name: Pull default Docker image
-        # docker_image:
-        # name: httpd
-        # source: pull
-
-    # Creates the number of containers defined by the variable create_containers, using values from vars file
-    #   - command: mkdir -p /home/ubuntu/.chainlink/tls
     - git:
        repo: https://github.com/es099078/node
        dest: /home/ubuntu/.chainlink
-       #    - command: mv /home/ubuntu/chainlink-assets /home/ubuntu/.chainlink
+     
     - command: chown -R ubuntu:ubuntu /home/ubuntu/.chainlink
     - command: docker run --name postgres -e POSTGRES_PASSWORD=redhat -p 5422:5432 -d postgres
     - pause:
