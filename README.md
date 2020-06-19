@@ -21,16 +21,16 @@
       vpc_id = "Insert your default vpc id",
       key_name = "name of your key pair"
  
- # Terraform init
- # Terraform apply
+ #Terraform init
+ #Terraform apply
       
-  # 6) Setting Ansible playbook
-   Edit run-playbook.sh
-      --private-key= "Add your private key path"
-   Edit hosts
+  # 6) Setting Up your Ansible playbook
+   Edit run-playbook.sh - 
+      --private-key= "Add your private key path";
+   Edit hosts - 
     Add your instance
       
- # sh run-playbook.sh
+ #sh run-playbook.sh
       
 
      
