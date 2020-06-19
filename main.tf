@@ -50,8 +50,6 @@ resource "aws_instance" "App"{
         key_name = "sravya" #KeyPair name to be attached to the instance. 
         vpc_security_group_ids = ["${aws_security_group.ssh_http_https.id}"] 
         provisioner "local-exec" { command = "sleep 20" } 
-               
-      }
-
+         
 }
 
