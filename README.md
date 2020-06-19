@@ -16,10 +16,21 @@
      $ cd chainlink_node_deployment
      
  # 5) Setting Up your AWS Environment
-  Edit main.tf
-      Add your AWS access key id and secret key (For security, Don't commit your credentials TO GITHUB)
-      vpc_id = "Insert your default vpc id"
+  Edit main.tf - 
+      Add your AWS access key id and secret key (For security, Don't commit your credentials TO GITHUB),
+      vpc_id = "Insert your default vpc id",
       key_name = "name of your key pair"
+ 
+ # Terraform init
+ # Terraform apply
+      
+  # 6) Setting Ansible playbook
+   Edit run-playbook.sh
+      --private-key= "Add your private key path"
+   Edit hosts
+    Add your instance
+      
+ # sh run-playbook.sh
       
 
      
