@@ -30,7 +30,7 @@
       pip:
         name: docker
     - git:
-       repo: https://github.com/es099078/node
+       repo: https://github.com/SravyaMuppala/postgres.git
        dest: /home/ubuntu/.chainlink
      
     - command: chown -R ubuntu:ubuntu /home/ubuntu/.chainlink
