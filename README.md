@@ -1,38 +1,48 @@
-# Terraform-ansible-chainlink
+# Insight Project
+ ## Automated Chainlink Node Deployment
 
-### 1) Install Terraform
-    $ wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
-    $ unzip terraform_0.12.26_linux_amd64.zip
-    $ sudo mv terraform /usr/local/bin
+### Table of Contents
+    - Introduction
+    - Development
+    - Engineering Challenges
     
-### 2) Install Ansible
-     $ sudo apt install ansible
-      
-### 3) Install python-boto library
-     $ sudo apt-get install python-boto
+### Introduction
+
+   Decentralized networks require Chainlink nodes to act as middleware to the outside world. For instance, blockchains have no way of securely exchanging information with the      outside world this problem can be solved using the Chainlink node. But most of the Chainlink node deployments are often manual, unpredictable and needs a longer time. 
+   
+   My project focuses on the one-click deployment of robust Chainlink nodes on AWS.
+
+### Development
+   
+   To deploy the Chainlink node, you will need the following dependencies:
+   
+   - Terraform
+   - Ansible 
+   - Docker
+   - awscli
      
-### 4) Clone Chainlink_node_deployment
-     $ git clone https://github.com/SravyaMuppala/chainlink_node_deployment.git
-     $ cd chainlink_node_deployment
-     
-### 5) Setting Up your AWS Environment
-  **Edit main.tf** - 
-      Add your AWS access key id and secret key (For security, Don't commit your credentials TO GITHUB),
-      vpc_id = "Insert your default vpc id",
-      key_name = "name of your key pair"
-      
-### 6) Run Terraform
-        Terraform init
-        Terraform apply
-      
-### 7) Setting Up your Ansible playbook
-   **Edit run-playbook.sh** - 
-      --private-key= "Add your private key path";
-   **Edit hosts** - 
-    Add your instance
-      
-### 8) Run Ansible playbook
+   Before deploying the Chainlink node, these are steps to follow to setup environment:
+   
+   1. git clone https://github.com/SravyaMuppala/postgres.git
+   2. git clone https://github.com/SravyaMuppala/Automated_Chainlink_Node_Deployment.git
+   3. Setup AWS Environment
+      - **Edit main.tf:** Enter your AWS access key id and secret key, vpc_id = "Insert your default vpc id", key_name = "name of your key pair"
+   4. Run Terraform
+      – Deploys instance on AWS
+   5. Setup Ansible Playbook
+      - **Edit run-playbook.sh:** --private-key= "Add your private key path";
+      - **Edit hosts:** Add your instance
+   
+ Run Ansible playbook
      sh run-playbook.sh
+ 
+### Engineering Challenges
+ 
+  - Deployment of Postgres on Docker.
+  
+  - HTTP 400 - authentication error when deploying Chainlink node
+     - Updated configuration of the environment variable ALLOW_Origin = * - By changing it to * instead of specific addresses/URLs it will allow all connections to the API on           CLIENT_NODE_URL
+ 
       
 
      
