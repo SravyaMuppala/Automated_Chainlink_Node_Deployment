@@ -1,10 +1,10 @@
 # Insight Project
- ## Automated Chainlink Node Deployment
+## Automated Chainlink Node Deployment
 
 ### Table of Contents
-    - Introduction
-    - Development
-    - Engineering Challenges
+   - Introduction
+   - Development
+   - Engineering Challenges
     
 ### Introduction
 
@@ -34,7 +34,7 @@
       - **Edit hosts:** Add your instance
    
  Run Ansible playbook
-     sh run-playbook.sh
+     - sh run-playbook.sh
  
 ### Engineering Challenges
  
